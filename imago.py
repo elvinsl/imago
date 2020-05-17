@@ -3,6 +3,17 @@ import argparse
 import os
 
 
+def banner():
+    print('''
++------------------------------------------+
+| imago image manipulater                  |
+| imago v.0.1                              |
+| Author: Elvin --> elvinsl                |
+| Github: https://github.com/elvinsl/imago |
++------------------------------------------+
+    ''')
+
+
 def get_args():
     parser = argparse.ArgumentParser(description='Imago -->> Image manipulater',
                                      epilog='I was hoping for Kenobi, why are you here?')
@@ -189,12 +200,18 @@ def del_add(input_image=None, input_folder=None, output_folder=None):
 
 args = get_args()
 output_folder = args.folder
-
-if args.size:
-    output_folder = resize(args.size, args.image, output_folder, args.output)
-if args.filter:
-    output_folder = filter_image(args.filter, args.image, output_folder, args.output)
-if args.convert:
-    output_folder = convert_image(args.convert, args.image, output_folder, args.output)
-if args.keep:
-    del_add(args.image, args.folder, args.output)
+banner()
+try:
+    if args.size:
+        output_folder = resize(args.size, args.image,
+                               output_folder, args.output)
+    if args.filter:
+        output_folder = filter_image(
+            args.filter, args.image, output_folder, args.output)
+    if args.convert:
+        output_folder = convert_image(
+            args.convert, args.image, output_folder, args.output)
+    if args.keep:
+        del_add(args.image, args.folder, args.output)
+except FileNotFoundError:
+    print('File not found')
