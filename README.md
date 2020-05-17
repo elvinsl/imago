@@ -1,17 +1,24 @@
-# imago
+# Imago
 
-Image manipulation tool using Python
+Imago is a python tool for image manipulation.
 
-**Dependencies**
+## Dependencies
 
 - Pillow
 
-  $ pip install pillow 
+```bash
+python3 -m pip install --upgrade pip
+python3 -m pip install --upgrade Pillow
+```
 
-**Installing**
+## Installation
 
-  $ git clone https://github.com/elvinsl/imago.git
-  
-  $ cd imago/
-  
-  $ python3 imago.py --help
+```bash
+git clone https://github.com/elvinsl/imago.git
+```
+
+## Usage
+
+```bash
+python3 imago --help
+```
