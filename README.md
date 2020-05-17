@@ -22,3 +22,11 @@ git clone https://github.com/elvinsl/imago.git
 ```bash
 python3 imago --help
 ```
+
+## Examples
+
+```bash
+python3 imago --image image.jpg --resize 1920x1080
+python3 imago --image image.jpg --resize 1920x1080 --filter blur
+python3 imago --image image.jpg --resize 1920x1080 --filter blur --convert l
+```
