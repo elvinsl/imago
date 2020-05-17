@@ -6,7 +6,7 @@ Image manipulation tool using Python
 
 - Pillow
 
-.. code-block:: 
+  $ pip install pillow 
 
 **Installing**
 
@@ -14,4 +14,4 @@ Image manipulation tool using Python
   
   $ cd imago/
   
-  $ 
+  $ python3 imago.py --help
